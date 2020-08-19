@@ -6,3 +6,29 @@ input::-webkit-outer-spin-button{
 input[type=number]{
   -moz-appearance: textfield;
 }
+
+
+input:valid{
+  border: 1px solid #23fe7e;
+}
+
+input:invalid span::after{
+  content: 'Please enter valid value';
+}
+
+
+input:out-of-range{
+  border: 5px solid blue;
+}
+
+input[name=i_like]:invalid{
+  border: 2px dashed red;
+}
+
+input[name=i_like]:invalid:required{
+  background-image: linear-gradient(to right, pink, lightgreen);
+}
+
+input[name=i_like]:valid{
+  border: 2px solid black;
+}

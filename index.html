@@ -13,22 +13,45 @@
 
 <body>
   <form action="#" method="post">
-    <label for="name">Name:</label>
-    <input id="name" type="text" name="name" maxlength="30" pattern="^[A-Za-z ]*$"
-    required>
 
-    <label for="lastname">Lastname:</label>
-    <input id="lastname" type="text" name="lastname" maxlength="30"
-    pattern="^[A-Za-z ]*$" required>
+    <fieldset>
+      <legend>Personal information</legend>
 
-    <label for="age">Age:</label>
-    <input id="age" type="number" name="age" min="18" max="140" required>
+      <label for="name">Name:</label>
+      <input id="name" type="text" name="name" maxlength="30" pattern="^[A-Za-z ]*$"
+      required>
 
-    <label for="email-address">Email Address:</label>
-    <input id="email-address" type="email" name="email-address" maxlength="70" required>
+      <label for="lastname">Lastname:</label>
+      <input id="lastname" type="text" name="lastname" maxlength="30"
+      pattern="^[A-Za-z ]*$" required>
+
+      <label for="age">Age:</label>
+      <input id="age" type="number" name="age" min="18" max="140" step="2" required>
+      <span></span>
+
+      <label for="email-address">Email Address:</label>
+      <input id="email-address" type="email" name="email-address" maxlength="70"
+      multiple required>
+    </fieldset>
 
     <input type="submit" value="Send">
   </form>
+
+  <form>
+    <label for="choose">Would you prefer banana or cherry</label>
+    <input type="text" id="t1" name="i_like"  list="l1" pattern="[Bb]anana|[Cc]herry" required>
+    <datalist id="l1">
+      <option>Banana</option>
+      <option>Cherry</option>
+      <option>Apple</option>
+      <option>Strawberry</option>
+      <option>Lemon</option>
+      <option>Orange</option>
+    </datalist>
+    <button>Send</button>
+  </form>
+
+  <p>The <dfn><abbr title="Wirld Wide Web">WWW</abbr></dfn> was founded in 1995.</p>
 
   <script type="text/javascript" charset="utf-8" src="./js/custom.js"></script>
 </body>
